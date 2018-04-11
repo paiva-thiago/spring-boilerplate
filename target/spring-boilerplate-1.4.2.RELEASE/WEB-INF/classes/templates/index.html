@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>SIGOM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css"	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" th:href="@{/css/main.css}"	href="../../css/main.css" />
+</head>
+<body>	
+	<div class="container">
+
+		<div class="starter-template">
+			<div class="loginmodal-container">
+				<h1 th:text="SIGOM"></h1>
+				<div  class="alert alert-danger" th:text="${message}"  th:unless="${#strings.isEmpty(message)}"></div>
+				<form method="POST" action="/login">
+					<input type="text" name="user" placeholder="Usuário">
+					<input type="password" name="pass" placeholder="Senha">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				</form>						
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

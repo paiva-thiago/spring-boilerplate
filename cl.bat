@@ -1,0 +1,1 @@
+mvn clean -f "d:\paiva\spring_prjts\hello-spring\pom.xml"
