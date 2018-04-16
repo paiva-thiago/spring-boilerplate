@@ -10,7 +10,10 @@ git clone https://github.com/paiva-thiago/spring-boilerplate.git
 
 ## Sobre
 
-Este projeto usa o `spring-boot`, que inclui um server no seu processo de inicialização e através do comando no maven, é iniciado via linha de comando.
+Este projeto usa o `spring-boot`, que inclui um server no seu processo de inicialização e através do comando no maven, é iniciado via linha de comando. Inclusive neste projeto temos dois arquivos **.bat** para servir como atalhos:
+
+1. *rs.bat* - para limpar o projeto, dando um 'reset'. Ideal caso tenha sido realizada alguma alteração no arquivo de dependências (**pom.xml**),
+2. *st.bat* - para iniciar a aplicação. Ela estará disponível para acesso no browser em `localhost:8080`, exceto em casos em que esta porta esteja ocupada.
 
 Em `src/java/com/thiagopaiva/sistema` estão os arquivos Java e os templates em `src/main/resources`.
 
