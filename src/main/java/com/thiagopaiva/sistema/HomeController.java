@@ -8,13 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-    private final String USER = "login";
-    private final String PASS = "abc123";
+    private static final String USER   = "login";
+    private static final String PASS   = "abc123";
+    private static final String MSGPRM = "message";
     
     @RequestMapping("/home")
     public ModelAndView home(@RequestParam(value="name", required=false, defaultValue="Mundo") String name) {
         ModelAndView modelAndView = new ModelAndView("home");		
-        modelAndView.addObject("message", name);		
+        modelAndView.addObject(MSGPRM, name);		
 		return modelAndView;        
     }
     
@@ -25,7 +26,7 @@ public class HomeController {
             modelAndView = new ModelAndView("home");				
         }else{
             modelAndView = new ModelAndView("index");				
-            modelAndView.addObject("message","Usuário ou senha inválidos!");
+            modelAndView.addObject(MSGPRM,"Usuário ou senha inválidos!");
         }
         return modelAndView;        
         
@@ -34,7 +35,7 @@ public class HomeController {
     @RequestMapping("/")
     public ModelAndView root() {
         ModelAndView modelAndView = new ModelAndView("index");		
-        modelAndView.addObject("message","");
+        modelAndView.addObject(MSGPRM,"");
 		return modelAndView;        
     }
 }
